@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARÔMETRO</title>
+    <link rel="stylesheet" href="src/estilo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+    <div class="menu">
+        <button id="salvarPDF" onclick="salvarPDF()">Salvar PDF</button>
+        <h4>CARÔMETRO</h4>
+        <span id="contadorAlunosSalvos">00</span>
+    </div>
+
+    <h2>CARÔMETRO</h2>
+
+    <div class="container">
+        <div class="select-container">
+            <select id="anoSelect">
+                <select id="anoSelect"></select>
+                <select id="periodoSelect">
+                    <option value="periodo">Período</option>
+                    <option value="ano">Ano</option>
+                </select>
+                <select id="turmaSelect"></select>
+        </div>
+       
+        <input type="text" id="alunoInput" placeholder="Nome do aluno...">
+        
+        <label for="fotoInput" class="file-label">
+            <span>Selecionar imagem</span>
+            <input type="file" id="fotoInput" class="input-file" style="display:none;">
+            <img src="src/img/Upload.png" alt="Selecione uma imagem"/>
+        </label>
+
+        <label class="image-preview01">
+            <img id="imagePreview" src="src/img/avatar.jpg"/>
+        </label>
+    
+        <button onclick="adicionarAluno()">Adicionar Aluno</button>
+        <div id="listaAlunos" class="alunos"></div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" 
+        integrity="sha384-NWTHo/BYCBY359830LT/PAaQZKISS@SneQgAvhs113zBuBr9RevNg5IHCHAUQ/"
+        crossorigin="anonymous"></script>
+    <script src="src/script.js"></script>
+    
+</body>
+</html>
+

@@ -1,0 +1,190 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #1b1b1d, #0c0c0d);
+    color: #fff;
+    padding-bottom: 100px;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.55);
+    backdrop-filter: blur(12px);
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.menu button {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu button:hover {
+    transform: scale(1.07);
+    filter: brightness(1.15);
+}
+
+#contadorAlunosSalvos {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container {
+    margin: 130px auto 40px;
+    width: 90%;
+    max-width: 850px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+select,
+input[type="text"],
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.09);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+select:hover,
+input:hover {
+    border-color: #b691ff;
+}
+
+button {
+    background: linear-gradient(135deg, #6d28d9, #d946ef);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.18);
+}
+
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.file-label img {
+    width: 55px;
+    filter: drop-shadow(0px 0px 6px #9f7aea);
+    transition: 0.3s ease;
+}
+
+.file-label:hover img {
+    transform: scale(1.15);
+}
+
+.image-preview01 {
+    margin: 15px auto;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(255,255,255,0.09);
+    border: 2px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-preview01 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container button {
+    width: 60%;
+    margin: 10px auto 20px;
+    display: block;
+    padding: 12px;
+}
+
+.alunos {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 20px;
+}
+
+.aluno {
+    background: rgba(255,255,255,0.08);
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.aluno:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 7px 25px rgba(0,0,0,0.45);
+}
+
+.aluno img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.aluno .id-aluno {
+    font-size: 12px;
+    color: #e4e4e4;
+    text-align: left;
+}
+
+@media (max-width: 480px) {
+    .menu h4 { font-size: 16px; }
+    #contadorAlunosSalvos { font-size: 22px; }
+    .image-preview01 { width: 150px; height: 150px; }
+    .container button { width: 80%; }
+}
